@@ -5,7 +5,7 @@ Cette repository contient le code source pour le test d’embauche dont l’éno
 >Test Back 
 Réaliser une API REST dans le langage de votre choix avec framework ou non. L’api doit au minimum répondre sur 4 routes : Get /vehicles (pour afficher une liste de véhicules avec id, nom, etc) Post /vehicle (pour ajouter un véhicule à la liste, la route get devra le renvoyer aussi si on l’appelle) Delete /vehicle/:id (pour supprimer un véhicule de la liste) Put /vehicle/:id (pour modifier un véhicule) Vous êtes libre d’implémenter toutes les bonnes pratiques à votre code et d’utiliser ou non une BDD pour le stockage des véhicules.
 
-J’ai implanter un simple poc (proof of concept) api, avec une base de donnée sql server dont le model UML est le suivant: 
+J’ai implémenté un simple poc (proof of concept) api, avec une base de donnée sql server dont le model UML est le suivant: 
 
 ![alt text](https://i.imgur.com/vc71TGt.png)
 
@@ -24,9 +24,12 @@ J’ai implanter un simple poc (proof of concept) api, avec une base de donnée 
 -	Build la solution afin de restaurer tous les paquet nugets.
 -   Création et initialisation de la base de donnée
 La base de donner peux être créer et initialiser (le code contient le code de population de la bans ApplicationContext)via les étapes  suivantes :
-    1. Ouvrir Package Manager Console dans visual studio, selectionner le projet repositories, et executer la commade `update-Database`:
+    1. Ouvrir Package Manager Console dans visual studio, selectionner le projet repositories, et executer la commande `update-Database`:
+    
     ![alt text](https://i.imgur.com/l4M09zw.png)
+    
     2. Vérifier que la base a bien été créer
+    
     ![alt text](https://i.imgur.com/w7OjE1R.png)
 
 ## API définition
