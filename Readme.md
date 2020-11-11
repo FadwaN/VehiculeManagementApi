@@ -9,9 +9,9 @@ J’ai implémenté un simple poc (proof of concept) api, avec une base de donn�
 
 ![alt text](https://i.imgur.com/vc71TGt.png)
 
-## Les technologies/architecture/Patron utilisées :
+## Les technologies/architectures/patrons utilisés :
 -	.Net core 3.1.1, entity framework core 3.1.1, visual studio, visual studio online (pour le ci).
--	Onion architecture pour assurer le séparation de concernes entre les différentes couches (j’ai opter pour cette architecture vue qu’elle est plus adapter dans ces genre de projet, elle simplifie la testabilité du code (unit tests ou tests d’intégration, et chaque couche sera tester séparément)),elle enforce les principes SOLID pour avoir du code clean et extensible.
+-	Onion architecture pour assurer la séparation de concernes entre les différentes couches (j’ai opter pour cette architecture vue qu’elle est plus adapter pour les api REST, elle simplifie la testabilité du code (unit tests ou tests d’intégration, et chaque couche sera tester séparément)),elle enforce les principes SOLID pour avoir du code clean et extensible.
 
 ![alt text](https://i.imgur.com/9bJRkOa.png)
 -	Repository patron pour la gestion de toutes les opération en relation avec la base de donnée, j’ai essayé de bien organier le code et le réutiliser (éviter la répétition).
