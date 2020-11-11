@@ -42,8 +42,8 @@ La base de donner peux être créer et initialiser (le code contient le code de 
 |PUT /api/Vehicules/:id	|Mis à jour le véhicule dont l’id est id.	|Id du véhicule a mettre ajour+ un nouveau objet véhicule dans le body du requête http.|
 |DELETE  /api/Vehicules/:id	|Supprimer le véhicule dont l’id est id.	|Id du véhicule a supprimer.|
 |GET /api/Models	|Retourner tous les modèle de véhicules dans la base|	/|
-|GET /api/Models /:id|	Retourner le modèle de vehicule dont l’id est id|	Id du modèle de véhicule à retourner|
-|POST | /api/Models	Ajouter un modèle de véhicule a la base	Le modèle de véhicule a ajouter comme une objet json, exemple :{"Model": "nom model", "description": "Description model" }|
+|GET /api/Models/:id|	Retourner le modèle de vehicule dont l’id est id|	Id du modèle de véhicule à retourner|
+|POST /api/Models|	Ajouter un modèle de véhicule a la base	|Le modèle de véhicule a ajouter comme une objet json, exemple :{"Model": "nom model", "description": "Description model" }|
 |PUT /api/Models /:id	|Mis à jour le modèle de véhicule dont l’id est id.|	Id du modèle de véhicule à mettre ajour+ un nouveau objet véhicule dans le body du requête http.|
 |DELETE  /api/Models /:id	|Supprimer le modèle de véhicule dont l’id est id.	|Id du modèle de véhicule à supprimer.|
 
