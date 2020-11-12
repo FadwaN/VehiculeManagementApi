@@ -6,6 +6,6 @@ namespace DomainEntities
 {
     public class BaseEntity
     {
-        public Int64 Id { get; set; }
+        public long Id { get; set; }
     }
 }

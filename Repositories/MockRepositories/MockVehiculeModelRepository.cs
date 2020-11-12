@@ -7,6 +7,9 @@ using Repositories.Interfaces;
 
 namespace Repositories.MockRepositories
 {
+    /// <summary>
+    /// Class pour moquer le repository des models véhicules pour effectuer des test sans passer par la base de donnée.
+    /// </summary>
     public class MockVehiculeModelRepository: IModelRepository
     {
         private readonly List<ModelVehicule> mockModelsList =new List<ModelVehicule>()

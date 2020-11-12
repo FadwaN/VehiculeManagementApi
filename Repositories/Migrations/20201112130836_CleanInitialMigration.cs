@@ -2,12 +2,12 @@
 
 namespace Repositories.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class CleanInitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ProductTypes",
+                name: "ModelVehicules",
                 columns: table => new
                 {
                     Id = table.Column<long>(nullable: false)
@@ -17,11 +17,11 @@ namespace Repositories.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductTypes", x => x.Id);
+                    table.PrimaryKey("PK_ModelVehicules", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Categories",
+                name: "Vehicules",
                 columns: table => new
                 {
                     Id = table.Column<long>(nullable: false)
@@ -37,32 +37,32 @@ namespace Repositories.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
+                    table.PrimaryKey("PK_Vehicules", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Categories_ProductTypes_ModelId",
+                        name: "FK_Vehicules_ModelVehicules_ModelId",
                         column: x => x.ModelId,
-                        principalTable: "ProductTypes",
+                        principalTable: "ModelVehicules",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
-                table: "ProductTypes",
+                table: "ModelVehicules",
                 columns: new[] { "Id", "Description", "Model" },
                 values: new object[] { 1L, "Model 1 description", "Model1" });
 
             migrationBuilder.InsertData(
-                table: "ProductTypes",
+                table: "ModelVehicules",
                 columns: new[] { "Id", "Description", "Model" },
                 values: new object[] { 2L, "Model 2 description", "Model2" });
 
             migrationBuilder.InsertData(
-                table: "ProductTypes",
+                table: "ModelVehicules",
                 columns: new[] { "Id", "Description", "Model" },
                 values: new object[] { 3L, "Model 3 description", "Model3" });
 
             migrationBuilder.InsertData(
-                table: "Categories",
+                table: "Vehicules",
                 columns: new[] { "Id", "Annee", "Couleur", "Description", "Disponibilite", "Matricule", "ModelId", "Nom", "Prix" },
                 values: new object[,]
                 {
@@ -74,18 +74,18 @@ namespace Repositories.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Categories_ModelId",
-                table: "Categories",
+                name: "IX_Vehicules_ModelId",
+                table: "Vehicules",
                 column: "ModelId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "Vehicules");
 
             migrationBuilder.DropTable(
-                name: "ProductTypes");
+                name: "ModelVehicules");
         }
     }
 }

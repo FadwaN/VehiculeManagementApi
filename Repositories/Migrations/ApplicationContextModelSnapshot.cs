@@ -33,7 +33,7 @@ namespace Repositories.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductTypes");
+                    b.ToTable("ModelVehicules");
 
                     b.HasData(
                         new
@@ -96,7 +96,7 @@ namespace Repositories.Migrations
 
                     b.HasIndex("ModelId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Vehicules");
 
                     b.HasData(
                         new

@@ -5,6 +5,10 @@ using DomainEntities;
 
 namespace Repositories.Interfaces
 {
+    /// <summary>
+    /// Class de base pour tous les repositories.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IRepository<T> where T : BaseEntity
     {
         List<T> GetAll();

@@ -12,8 +12,8 @@ namespace Repositories.Repository
         {
         }
 
-        public DbSet<Vehicule> Categories { get; set; }
-        public DbSet<ModelVehicule> ProductTypes { get; set; }
+        public DbSet<Vehicule> Vehicules { get; set; }
+        public DbSet<ModelVehicule> ModelVehicules { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

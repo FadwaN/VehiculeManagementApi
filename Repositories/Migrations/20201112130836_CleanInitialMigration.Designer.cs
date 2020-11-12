@@ -9,8 +9,8 @@ using Repositories.Repository;
 namespace Repositories.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20201111144953_MyFirstMigration")]
-    partial class MyFirstMigration
+    [Migration("20201112130836_CleanInitialMigration")]
+    partial class CleanInitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace Repositories.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductTypes");
+                    b.ToTable("ModelVehicules");
 
                     b.HasData(
                         new
@@ -98,7 +98,7 @@ namespace Repositories.Migrations
 
                     b.HasIndex("ModelId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Vehicules");
 
                     b.HasData(
                         new
