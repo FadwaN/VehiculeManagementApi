@@ -1,7 +1,7 @@
 # Vehicule Management API
 [![Build Status](https://dev.azure.com/ffnemer/VehiculeManagementApi/_apis/build/status/FadwaN.VehiculeManagementApi?branchName=master)](https://dev.azure.com/ffnemer/VehiculeManagementApi/_build/latest?definitionId=1&branchName=master)
  
-Ce repository contient le code source du le test d’embauche suivant :
+Ce repository contient le code source du test d’embauche suivant :
 >Test Back 
 Réaliser une API REST dans le langage de votre choix avec framework ou non. L’api doit au minimum répondre sur 4 routes : Get /vehicles (pour afficher une liste de véhicules avec id, nom, etc) Post /vehicle (pour ajouter un véhicule à la liste, la route get devra le renvoyer aussi si on l’appelle) Delete /vehicle/:id (pour supprimer un véhicule de la liste) Put /vehicle/:id (pour modifier un véhicule) Vous êtes libre d’implémenter toutes les bonnes pratiques à votre code et d’utiliser ou non une BDD pour le stockage des véhicules.
 
