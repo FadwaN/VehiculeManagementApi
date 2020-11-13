@@ -34,9 +34,6 @@ La base de données peut être crée et initialisée (le code contient le code d
 
 ## API définition
 
-| Plugin | README |
-| ------ | ------ |
-
 |API	 |Description 	|Paramètres/exemple|
 | ------ | ------ | ------ |
 |GET /api/Vehicules	|Retourner tous les véhicules dans la base|	/|
@@ -52,7 +49,7 @@ La base de données peut être crée et initialisée (le code contient le code d
 
 ## Test via postman
 -	Ajouter `Content-Type`: `application/json`. 
--	Voici quelaue screen shots:
+-	Voici quelque screen shots:
 -	![alt text](https://i.imgur.com/qUnONxO.png)
 -	![alt text](https://i.imgur.com/fN6IC8U.png)
 -	![alt text](https://i.imgur.com/MxzqYrv.png)
