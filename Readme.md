@@ -23,7 +23,7 @@ J’ai implémenté un simple poc (proof of concept) api, avec une base de donn�
 -	Vous assurer que vous avez .net core 3.1.1 installé sur votre machine.
 -	Builder la solution afin de restaurer tous les paquets nugets.
 -   Création et initialisation de la base de données
-La base de données peux être crée et initialisée (le code contient le code de population de la bans ApplicationContext):
+La base de données peut être crée et initialisée (le code contient le code de population de la bans ApplicationContext) en suivant les étapes suivantes:
     1. Ouvrir Package Manager Console dans visual studio, selectionner le projet repositories, et executer la commande `update-Database`:
     
     ![alt text](https://i.imgur.com/l4M09zw.png)
