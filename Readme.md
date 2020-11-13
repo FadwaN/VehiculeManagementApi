@@ -1,7 +1,7 @@
 # Vehicule Management API
 [![Build Status](https://dev.azure.com/ffnemer/VehiculeManagementApi/_apis/build/status/FadwaN.VehiculeManagementApi?branchName=master)](https://dev.azure.com/ffnemer/VehiculeManagementApi/_build/latest?definitionId=1&branchName=master)
  
-Cette repository contient le code source pour le test d’embauche dont l’énoncé est le suivant :
+Ce repository contient le code source du le test d’embauche suivant :
 >Test Back 
 Réaliser une API REST dans le langage de votre choix avec framework ou non. L’api doit au minimum répondre sur 4 routes : Get /vehicles (pour afficher une liste de véhicules avec id, nom, etc) Post /vehicle (pour ajouter un véhicule à la liste, la route get devra le renvoyer aussi si on l’appelle) Delete /vehicle/:id (pour supprimer un véhicule de la liste) Put /vehicle/:id (pour modifier un véhicule) Vous êtes libre d’implémenter toutes les bonnes pratiques à votre code et d’utiliser ou non une BDD pour le stockage des véhicules.
 
@@ -14,21 +14,21 @@ J’ai implémenté un simple poc (proof of concept) api, avec une base de donn�
 -	Onion architecture pour assurer la séparation des préoccupations (SoC) entre les différentes couches (j’ai opté pour cette architecture car elle est plus adaptée aux api REST, elle simplifie la testabilité du code (unit tests ou tests d’intégration, et chaque couche sera testée séparément)),elle enforce les principes SOLID pour avoir un code propre et extensible).
 
 ![alt text](https://i.imgur.com/9bJRkOa.png)
--	Repository patron pour la gestion de toutes les opération en relation avec la base de donnée, j’ai essayé de bien organier le code et le réutiliser (éviter la répétition).
+-	Repository patron pour la gestion de toutes les opérations en relation avec la base de données, j’ai essayé de bien organier le code et le réutiliser (éviter la répétition).
 -	Dependancy injection pattern, c’est le pattern d’injection des dépendances le plus adapté aux API REST surtout quand il s'agit de asp.net, il permet de découpler les implémentations les unes des autre, en injectant des interfaces dans les contrôleurs. 
 
 
 ## Installation et test :
 -	Cloner le repo en local via : `git clone https://github.com/FadwaN/VehiculeManagementApi.git`
--	Assurer bien que vous avez .net core 3.1.1 installé sur votre machine.
+-	Vous assurer que vous avez .net core 3.1.1 installé sur votre machine.
 -	Builder la solution afin de restaurer tous les paquets nugets.
--   Création et initialisation de la base de donnée
-La base de donner peux être créer et initialiser (le code contient le code de population de la bans ApplicationContext)via les étapes  suivantes :
+-   Création et initialisation de la base de données
+La base de données peux être crée et initialisée (le code contient le code de population de la bans ApplicationContext):
     1. Ouvrir Package Manager Console dans visual studio, selectionner le projet repositories, et executer la commande `update-Database`:
     
     ![alt text](https://i.imgur.com/l4M09zw.png)
     
-    2. Vérifier que la base a bien été créer
+    2. Vérifier que la base a bien été crée
     
     ![alt text](https://i.imgur.com/w7OjE1R.png)
 
@@ -41,13 +41,13 @@ La base de donner peux être créer et initialiser (le code contient le code de 
 | ------ | ------ | ------ |
 |GET /api/Vehicules	|Retourner tous les véhicules dans la base|	/|
 |GET /api/Vehicules/:id	|Retourner le véhicule dont l’id est id|	Id du véhicule à retourner|
-|POST  /api/Vehicules|	Ajouter un véhicule a la base|	Le véhicule a ajouter comme une objet json, exemple : {"matricule": "2222222", "nom": "Vehicule2","description": "Description vehicule2","annee": "2017","couleur": "Vert","prix": 1200,"disponibilite": true,"model": null,"modelId": 1}|
-|PUT /api/Vehicules/:id	|Mis à jour le véhicule dont l’id est id.	|Id du véhicule a mettre ajour+ un nouveau objet véhicule dans le body du requête http.|
-|DELETE  /api/Vehicules/:id	|Supprimer le véhicule dont l’id est id.	|Id du véhicule a supprimer.|
-|GET /api/Models	|Retourner tous les modèle de véhicules dans la base|	/|
+|POST  /api/Vehicules|	Ajouter un véhicule à la base|	Le véhicule à ajouter comme un objet json, exemple : {"matricule": "2222222", "nom": "Vehicule2","description": "Description vehicule2","annee": "2017","couleur": "Vert","prix": 1200,"disponibilite": true,"model": null,"modelId": 1}|
+|PUT /api/Vehicules/:id	|Mis à jour du véhicule dont l’id est id.	|Id du véhicule à mettre à jour+ un nouvel objet véhicule dans le body de la requête http.|
+|DELETE  /api/Vehicules/:id	|Supprimer le véhicule dont l’id est id.	|Id du véhicule à supprimer.|
+|GET /api/Models	|Retourner tous les modèles de véhicules dans la base|	/|
 |GET /api/Models/:id|	Retourner le modèle de vehicule dont l’id est id|	Id du modèle de véhicule à retourner|
-|POST /api/Models|	Ajouter un modèle de véhicule a la base	|Le modèle de véhicule a ajouter comme une objet json, exemple :{"Model": "nom model", "description": "Description model" }|
-|PUT /api/Models /:id	|Mis à jour le modèle de véhicule dont l’id est id.|	Id du modèle de véhicule à mettre ajour+ un nouveau objet véhicule dans le body du requête http.|
+|POST /api/Models|	Ajouter un modèle de véhicule à la base	|Le modèle de véhicule à ajouter comme objet json, exemple :{"Model": "nom model", "description": "Description model" }|
+|PUT /api/Models /:id	|Mis à jour du modèle de véhicule dont l’id est id.|	Id du modèle de véhicule à mettre à jour+ un nouvel objet véhicule dans le body de la requête http.|
 |DELETE  /api/Models /:id	|Supprimer le modèle de véhicule dont l’id est id.	|Id du modèle de véhicule à supprimer.|
 
 ## Test via postman
@@ -60,15 +60,15 @@ La base de donner peux être créer et initialiser (le code contient le code de 
 ## Idées d’amélioration
 -	Ajouter des tests d’intégrations.
 -	Ajouter des tests BDD pour bien documenter l’api implicitement.
--	Utiliser des DTO (Data transfert objets) dans chaque couche afin que le principe de séparation de couche soit respecter a 100%.
+-	Utiliser des DTO (Data transfert objets) dans chaque couche afin que le principe de séparation de couches soit respecté a 100%.
 -	Ajouter swagger pour documenter l’api implicitement.
--	Mieux gérer les exceptions, chaque couche doit retourner ces propres exceptions.
--	Ajouter des unit test pour le service interface et pout le projet api.
+-	Mieux gérer les exceptions, chaque couche doit retourner ses propres exceptions.
+-	Ajouter des unit test pour le service interface et pour le projet api.
 
 
 ## CI (Continious integration)
 [![Build Status](https://dev.azure.com/ffnemer/VehiculeManagementApi/_apis/build/status/FadwaN.VehiculeManagementApi?branchName=master)](https://dev.azure.com/ffnemer/VehiculeManagementApi/_build/latest?definitionId=1&branchName=master)
-Le statut du build est visualisé en haut, cette repository GitHub est liée à un pipeline CI que j’ai défini dans visual studio online.
+Le statut du build est visualisé en haut, ce repository GitHub est liée à un pipeline CI que j’ai défini dans visual studio online.
 Le pipeline est definit ici: https://dev.azure.com/ffnemer/VehiculeManagementApi/_build
 
 
